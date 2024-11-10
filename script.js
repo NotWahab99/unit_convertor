@@ -108,6 +108,11 @@ function convert() {
   else if (unit === "kToC") { result = inputValue - 273.15; unitText = "°C"; }
   else if (unit === "fToK") { result = ((inputValue - 32) * 5/9) + 273.15; unitText = "K"; }
   else if (unit === "kToF") { result = ((inputValue - 273.15) * 9/5) + 32; unitText = "°F"; }
+  else if (unit === "mileToKm") { result = inputValue * 1.60934; unitText = "km"; }
+  else if (unit === "kmToMile") { result = inputValue / 1.60934; unitText = "mile"; }
+  else if (unit === "inToCm") { result = inputValue * 2.54; unitText = "cm"; }
+  else if (unit === "cmToIn") { result = inputValue / 2.54; unitText = "in"; }
+
 
   // Round the result to 3 decimal places
   let formattedResult = result.toFixed(3); // Round to 3 decimal points
