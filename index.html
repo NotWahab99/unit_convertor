@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter By FCT</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Unit Converter</h1>
+    <label for="category">Choose Category:</label>
+    <select id="category" onchange="updateUnits()"> <!-- Event listener added here -->
+      <option value="mass">Mass</option>
+      <option value="length">Length</option>
+      <option value="time">Time</option>
+      <option value="speed">Speed</option>
+      <option value="temperature">Temperature</option>
+    </select>
+
+    <label for="unit">Choose Conversion:</label>
+    <select id="unit"></select> <!-- This will be populated by JS -->
+
+    <br><br>
+    <input type="number" placeholder="Enter number..." id="userInput">
+    <button onclick="convert()">Convert</button>
+    <p>Result: <span id="resultElement">Enter a number.</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

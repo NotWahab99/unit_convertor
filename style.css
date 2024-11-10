@@ -1,0 +1,182 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;  /* Center everything horizontally */
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  flex-direction: column;        /* Stack elements vertically */
+}
+
+/* Container for centering everything */
+.container {
+  background-color: #ffffff;
+  padding: 30px;  /* Increased padding */
+  border-radius: 10px;  /* Larger border radius */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);  /* Larger shadow */
+  width: 100%;
+  max-width: 400px;  /* Increased max-width */
+  text-align: center;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3.5rem;  /* Increased font size */
+  color: #333;
+  margin-bottom: 20px;  /* Increased margin */
+  font-weight: 600;
+}
+
+/* Input field styles */
+input[type="number"] {
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Dropdown select box */
+select {
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 90%;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: #3e8e41;
+  transform: scale(0.98);
+}
+
+/* Result Styling */
+p {
+  font-size: 1rem;
+  margin-top: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+#resultElement {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #e7f5e7;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles for larger screens (desktops/tablets) */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Media query for mobile devices (screen width 600px or smaller) */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .resultBox {
+    font-size: 14px;
+  }
+
+  /* Adjust input fields and buttons */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Media query for tablets (iPad-like devices, screen width between 600px and 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 90%;  /* Slightly larger for tablets */
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;  /* Adjust font size for tablets */
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;  /* Increased padding for better touch interaction */
+    font-size: 18px;  /* Larger font size */
+  }
+
+  #resultElement {
+    font-size: 1.2rem;  /* Increase result font size for better readability */
+  }
+}
+
+/* For larger screens (1024px and above) */
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 3.5rem;  /* Default font size for larger screens */
+  }
+
+  input, select {
+    font-size: 16px;
+  }
+}
